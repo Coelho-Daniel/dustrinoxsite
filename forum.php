@@ -71,7 +71,7 @@ include "php/verificationL.php";
                  </div>
                  <div class="div">
                     <h5>Comentario</h5>
-                    <input type="Comentario" class="input" name="Comentario" id="Comentario"  >
+                    <textarea type="Comentario" class="input" name="Comentario" id="Comentario" maxlength="30"></textarea>
                  </div>
               </div>
              

@@ -73,7 +73,7 @@ include "php/verificationL.php";
                  </div>
                  <div class="div">
                     <h5>Comentario</h5>
-                    <input type="Comentario" class="input" name="Comentario" id="Comentario"  value="<?php echo $_POST['comentario'] ?>">
+                    <textarea type="Comentario" class="input" name="Comentario" id="Comentario" maxlength="30"><?php echo $_POST['comentario'] ?></textarea>
                  </div>
               </div><br>
               <button  type="submit" name="edi" class="btn btn-primary" value="concluir">concluir</button><br>  
