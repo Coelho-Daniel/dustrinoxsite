@@ -11,6 +11,7 @@ include "php/verificationL.php";
 	<meta charset="utf-8">
 	<b><title>Dustrinox-Estruturas e Ferragens</title></b>
 	<link rel="stylesheet" type="text/css" href="./css/teste.css">
+   <link rel="stylesheet" href="./css/estrela.css">
     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
     
 </head>
@@ -75,7 +76,26 @@ include "php/verificationL.php";
                     <h5>Comentario</h5>
                     <textarea type="Comentario" class="input" name="Comentario" id="Comentario" maxlength="30"><?php echo $_POST['comentario'] ?></textarea>
                  </div>
-              </div><br>
+              </div>
+              <div class="estrelas">
+				<input type="radio" id="vazio" name="estrela" value="" checked>
+				
+				<label for="estrela_um"><i class="fa"></i></label>
+				<input type="radio" id="estrela_um" name="estrela" value="1">
+				
+				<label for="estrela_dois"><i class="fa"></i></label>
+				<input type="radio" id="estrela_dois" name="estrela" value="2">
+				
+				<label for="estrela_tres"><i class="fa"></i></label>
+				<input type="radio" id="estrela_tres" name="estrela" value="3">
+				
+				<label for="estrela_quatro"><i class="fa"></i></label>
+				<input type="radio" id="estrela_quatro" name="estrela" value="4">
+				
+				<label for="estrela_cinco"><i class="fa"></i></label>
+				<input type="radio" id="estrela_cinco" name="estrela" value="5"><br><br>
+				
+			</div><br>
               <button  type="submit" name="edi" class="btn btn-primary" value="concluir">concluir</button><br>  
             </form></center>
 

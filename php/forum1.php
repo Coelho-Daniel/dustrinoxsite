@@ -6,6 +6,7 @@ if (isset($_POST['ins']))
     $id= $_POST["id_user"];
     $Titulo = $_POST["Titulo"];
     $Comentario = $_POST["Comentario"];
+    $estrela = $_POST["estrela"];
 if (empty($Titulo) || empty($Comentario)) {
 	header("Location: ../forum.php");
      $_SESSION['for'] = "<p align='center' style='color:red; font-family:arial;'>Preencha todos os espaços!</p>" ;
@@ -13,7 +14,7 @@ if (empty($Titulo) || empty($Comentario)) {
     } 
     else
    {
-   	$sql = ("INSERT INTO `comentários`(`Data`, `Titulo`, `comentario`, `id_user`)vALUES (Now(),'$Titulo', '$Comentario', '$id' )");
+   	$sql = ("INSERT INTO `comentários`(`Data`, `Titulo`, `comentario`,`estrela`, `id_user`)vALUES (Now(),'$Titulo', '$Comentario','$estrela', '$id' )");
    	if ($conectar1->query($sql)===true) 
       {
       header("Location: ../forum.php");
@@ -54,8 +55,8 @@ elseif (isset($_POST['edi']))
   //$id= $_POST["id_user"];
   $Titulo = $_POST["Titulo"];
   $Comentario = $_POST["Comentario"];
-$sql = ("UPDATE `comentários` SET `Data`= NOW(),`Titulo`= '$Titulo',`comentario`= '$Comentario' WHERE comentários.id = $dad"
-);
+  $estrela = $_POST["estrela"];
+$sql = ("UPDATE `comentários` SET `Data`= NOW(),`Titulo`= '$Titulo',`comentario`= '$Comentario', `estrela`= $estrela WHERE comentários.id = $dad");
   $result = mysqli_query($conectar1, $sql);
   //echo $sql;
   //die;

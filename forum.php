@@ -74,7 +74,25 @@ include "php/verificationL.php";
                     <textarea type="Comentario" class="input" name="Comentario" id="Comentario" maxlength="30"></textarea>
                  </div>
               </div>
-             
+              <div class="estrelas">
+				<input type="radio" id="vazio" name="estrela" value="" checked>
+				
+				<label for="estrela_um"><i class="fa"></i></label>
+				<input type="radio" id="estrela_um" name="estrela" value="1">
+				
+				<label for="estrela_dois"><i class="fa"></i></label>
+				<input type="radio" id="estrela_dois" name="estrela" value="2">
+				
+				<label for="estrela_tres"><i class="fa"></i></label>
+				<input type="radio" id="estrela_tres" name="estrela" value="3">
+				
+				<label for="estrela_quatro"><i class="fa"></i></label>
+				<input type="radio" id="estrela_quatro" name="estrela" value="4">
+				
+				<label for="estrela_cinco"><i class="fa"></i></label>
+				<input type="radio" id="estrela_cinco" name="estrela" value="5"><br><br>
+				
+			</div>
                
                <br>
               <button  type="submit" name="ins" class="btn btn-primary" value="concluir">concluir</button><br>  
@@ -84,7 +102,7 @@ include 'php/conectar.php';
 
 
 
-  $sql = "select comentários.id, comentários.`Data`, comentários.`Titulo`,comentários.`comentario`, comentários.`id_user`, users.Nome  from comentários, users where comentários.id_user = users.id";
+  $sql = "select comentários.id, comentários.`Data`, comentários.`Titulo`,comentários.`comentario`, comentários.`estrela`, comentários.`id_user`, users.Nome  from comentários, users where comentários.id_user = users.id";
   $result = $conectar1->query($sql);
 
   //var_dump($result);//
@@ -98,10 +116,32 @@ include 'php/conectar.php';
       $nome = $row["Nome"];
       $Titulo = $row["Titulo"];
       $Comentario = $row["comentario"];
+      $estrela = $row["estrela"];
       $dad = $row["id"];
       $_SESSION['editar']=$row;
       $dad1 = $row["id_user"];
       $dad3 = $_SESSION['login_user']['id'];
+      
+      If ($estrela==0)
+      {
+         $valorEstrela = "vazio";
+      }
+      elseif ($estrela==1){
+         $valorEstrela = "estrela_um";
+      }
+      elseif ($estrela==2){
+         $valorEstrela = "estrela_dois";
+      }
+      elseif ($estrela==3){
+         $valorEstrela = "estrela_tres";
+      }
+      elseif ($estrela==4){
+         $valorEstrela = "estrela_quatro";
+      }
+      elseif ($estrela==5){
+         $valorEstrela = "estrela_cinco";
+         
+      }
 
       echo "<div class='row'>
               <p class='Nome'> Nome do user: $nome </p>           
@@ -121,6 +161,7 @@ include 'php/conectar.php';
             <input type="hidden" name="idei" value='.$dad.'>
             <input type="hidden" name="titulo" value="'.$Titulo.'">
             <input type="hidden" name="comentario" value="'.$row["comentario"].'">
+            <input type="hidden" id="'.$valorEstrela.'" name="estrela" value="'.$estrela.'">
             <button type="submit" name="edi" style="width:50px; height:50px;"><a class="fas fa-edit" ></a></button></input></td>
             </form>
             </div>
