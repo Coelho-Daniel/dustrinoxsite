@@ -439,3 +439,27 @@ width: 300px;
   width: 140px;
 
 }
+
+.container{
+  border-radius: 5px;
+  padding: 20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.row{
+  position: relative;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  margin: 25px;
+}
+.object{
+  position: absolute;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

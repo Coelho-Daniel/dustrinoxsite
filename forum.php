@@ -88,8 +88,9 @@ include 'php/conectar.php';
   $result = $conectar1->query($sql);
 
   //var_dump($result);//
-
+  
   if ($result->num_rows > 0) {
+  echo '<div class="container">';
 
     // output data of each row
     while ($row = $result->fetch_assoc()) {
@@ -102,43 +103,35 @@ include 'php/conectar.php';
       $dad1 = $row["id_user"];
       $dad3 = $_SESSION['login_user']['id'];
 
-      echo "<br><div class='forum'>
-       
-        <table style='width:100%;'>
-          <tr>
-            <td>
-                <div class='Nome'> Nome do user: $nome </div>           
+      echo "<div class='row'>
+              <p class='Nome'> Nome do user: $nome </p>           
               <p class='titulo'> Titulo: $Titulo </p>
               <p class='comentario'> Comentário: $Comentario </p>
-            </td>
-          </tr>
-        </table>
-      </div><br>
    ";
    if ($dad1 == $dad3)
       {
             $stat='
-            <table>
-               <form action="php/forum1.php" method="POST">
-                  <input type="hidden" name="ide" value='.$dad.'>
-                  <button type="submit" name="eli" style="width:50px; height:50px;"><a class="fas fa-trash" ></a></button></input></td>
-               </form>
+            <div class="object">
+            <form action="php/forum1.php" method="POST">
+               <input type="hidden" name="ide" value='.$dad.'>
+               <button type="submit" name="eli" style="width:50px; height:50px;"><a class="fas fa-trash" ></a></button></input></td>
+            </form>
             
             <form action="forum2.php" method="POST">
-
             <input type="hidden" name="idei" value='.$dad.'>
             <input type="hidden" name="titulo" value="'.$Titulo.'">
             <input type="hidden" name="comentario" value="'.$row["comentario"].'">
-            
             <button type="submit" name="edi" style="width:50px; height:50px;"><a class="fas fa-edit" ></a></button></input></td>
             </form>
-            </table>
+            </div>
       ';
       echo $stat;
       }
+      echo'</div>';
             }
-            
 
+            
+echo'</div>';
 }
 ?>
 
