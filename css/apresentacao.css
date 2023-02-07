@@ -1,0 +1,206 @@
+html {
+
+  font-family: sans-serif;
+
+  -webkit-text-size-adjust: 100%;
+
+      -ms-text-size-adjust: 100%;
+
+}
+
+
+
+ body {
+/*
+  width: 95%
+
+  max-width: 800px;
+*/
+ background-color: lightblue;
+
+    padding:0px 0px;
+
+    margin:auto;
+
+    line-height: 1.5;
+
+} 
+
+
+
+nav{
+
+  width: 100%;
+
+  background: black;
+
+  overflow: auto;
+
+}
+
+ul {
+
+
+
+  list-style-type: none;
+
+  padding: 18px 40px;
+
+  margin: 0px 0px 0px 150px;
+
+}
+
+
+
+li {
+
+  float: left;
+
+}
+
+
+
+/* .logo .logo1 
+
+{
+
+  position: absolute;
+
+  margin-top: 15px:
+
+  margin-left:10px; 
+
+  width: 160px;
+
+  border: 5px;
+
+  padding: 0px 0px;
+
+} */
+
+
+
+.img-fluid{
+
+  width: 100%;
+
+  height: 50%;
+
+}
+
+
+
+.o_que_fazemos
+
+{
+
+width: 30%;
+
+height: 20%;
+
+}
+
+
+
+
+
+li.right {
+
+  float: right;
+
+}
+
+
+
+
+
+
+
+
+
+nav a {
+
+  width: 100%;
+
+  display: block;
+
+  color: white;
+
+  text-align: center;
+
+  padding: 0px 20px;
+
+  text-decoration: none;
+
+  font-family: arial;
+
+
+
+}
+
+
+
+
+
+nav a:hover {
+
+  background-color: lightblue;
+
+  transition: 0.5s;
+
+  text-transform: uppercase;
+
+}
+
+
+
+.logo1 .logo1
+
+{ 
+
+
+
+  width: 400px;
+
+
+
+}
+
+
+
+table .table1
+
+{
+
+  width: 10;
+
+  padding: 11;}
+
+
+
+.fundo{
+
+
+
+background: #00000054;
+
+padding: 5px 40px;
+
+margin-left: 30px;
+
+margin-right: 40px; 
+
+margin-top: 10px;
+
+border-radius: 10px;
+
+}
+
+.carousel-caption{
+
+ background-color: rgba(0, 0, 0, 0.3);
+
+
+
+}
+
