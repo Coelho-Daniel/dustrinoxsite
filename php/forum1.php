@@ -56,7 +56,7 @@ elseif (isset($_POST['edi']))
   $Titulo = $_POST["Titulo"];
   $Comentario = $_POST["Comentario"];
   $estrela = $_POST["estrela"];
-$sql = ("UPDATE `comentários` SET `Data`= NOW(),`Titulo`= '$Titulo',`comentario`= '$Comentario', `estrela`= $estrela WHERE comentários.id = $dad");
+  $sql = ("UPDATE `comentários` SET `Data`= NOW(),`Titulo`= '$Titulo',`comentario`= '$Comentario', `estrela`= $estrela WHERE comentários.id = $dad");
   $result = mysqli_query($conectar1, $sql);
   //echo $sql;
   //die;
