@@ -150,8 +150,8 @@ include 'php/conectar.php';
               <div class='estrela'>
               <p class='estrela'> Avaliação: $estrela</p>
               <div class='estrelas'>
-              <label for='estrela_um'><i class='fa'></i></label>
-				  <input type='radio' id='estrela_um' name='estrela' value='1'>
+              <label for='estrela'><i class='fa'></i></label>
+				  <input type='radio' name='estrela'>
               </div>
               </div>
    ";
