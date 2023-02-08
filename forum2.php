@@ -74,11 +74,11 @@ include "php/verificationL.php";
                  </div>
                  <div class="div">
                     <h5>Comentario</h5>
-                    <textarea type="Comentario" class="input" name="Comentario" id="Comentario" maxlength="30"><?php echo $_POST['comentario'] ?></textarea>
+                    <textarea type="Comentario" class="input" name="Comentario" id="Comentario" maxlength="174"><?php echo $_POST['comentario'] ?></textarea>
                  </div>
               </div>
               <div class="estrelas">
-				<input type="radio" id="vazio" name="estrela" value="" checked>
+				<input type="radio" id="vazio" name="estrela" value="0" checked>
 				
 				<label for="estrela_um"><i class="fa"></i></label>
 				<input type="radio" id="estrela_um" name="estrela" value="1">
