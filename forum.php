@@ -95,7 +95,7 @@ include "php/verificationL.php";
 			</div>
                
                <br>
-              <button  type="submit" name="ins" class="btn btn-primary" value="concluir">concluir</button><br>  
+              <button  type="submit" id="avaliacao" name="ins" class="btn btn-primary" value="concluir">concluir</button><br>  
             </form></center>
 <?php 
 include 'php/conectar.php'; 
