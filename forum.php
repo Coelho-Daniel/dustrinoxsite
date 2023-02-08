@@ -147,6 +147,13 @@ include 'php/conectar.php';
               <p class='Nome'> Nome do user: $nome </p>           
               <p class='titulo'> Titulo: $Titulo </p>
               <p class='comentario'> Comentário: $Comentario </p>
+              <div class='estrela'>
+              <p class='estrela'> Avaliação: $estrela</p>
+              <div class='estrelas'>
+              <label for='estrela_um'><i class='fa'></i></label>
+				  <input type='radio' id='estrela_um' name='estrela' value='1'>
+              </div>
+              </div>
    ";
    if ($dad1 == $dad3)
       {
